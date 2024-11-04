@@ -7,6 +7,10 @@ const EPSILON = 1e-6
 var directionx
 var directiony
 
+var is_moving : bool
+
+@onready var anim_tree = $AnimationTree
+@onready var cursor = $"../cursor"
 
 func _physics_process(delta: float) -> void:
 
@@ -19,7 +23,19 @@ func _physics_process(delta: float) -> void:
 	if directionx > EPSILON or directiony > EPSILON or directionx < -EPSILON or directiony < -EPSILON:
 		if velocity.length() > SPEED:
 			velocity = velocity.normalized() * SPEED
-
+	
+	is_moving = velocity.length() > EPSILON
+	
+	if is_moving:
+		anim_tree.set("parameters/conditions/is_idle", false)
+		anim_tree.set("parameters/conditions/is_moving", true)
+		anim_tree.set("parameters/Walk/blend_position",
+			-velocity.normalized())
+	else:
+		anim_tree.set("parameters/conditions/is_moving", false)
+		anim_tree.set("parameters/conditions/is_idle", true)
+		anim_tree.set("parameters/Idle/blend_position",
+			(cursor.global_position - self.global_position).normalized())
 	move_and_slide()
 
 func speed_calc(dir: float, vel_dirred: float) -> float:
