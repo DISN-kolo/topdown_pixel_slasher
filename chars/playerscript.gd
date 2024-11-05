@@ -57,19 +57,17 @@ func _physics_process(delta: float) -> void:
 	
 	is_moving = velocity.length() > EPSILON
 	if is_sliding:
-		if !is_asked_to_move:
-			look_there = -(cursor.global_position - self.global_position).normalized()
-		else:
+		if is_asked_to_move:
 			look_there = -direction.normalized()
+		else:
+			look_there = -(cursor.global_position - self.global_position).normalized()
 		anim_tree.set("parameters/conditions/is_idle", false)
 		anim_tree.set("parameters/conditions/is_moving", false)
 		anim_tree.set("parameters/conditions/is_sliding", true)
 		pass_look_vector_to_animation(anim_tree, look_there)
 	elif is_moving:
 		#look_there = -velocity.normalized()
-		if !is_asked_to_move:
-			look_there = (cursor.global_position - self.global_position).normalized()
-		else:
+		if is_asked_to_move:
 			look_there = -direction.normalized()
 		anim_tree.set("parameters/conditions/is_idle", false)
 		anim_tree.set("parameters/conditions/is_moving", true)

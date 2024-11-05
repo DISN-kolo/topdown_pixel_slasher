@@ -13,6 +13,7 @@ config_version=5
 config/name="topdown pixel slasher"
 run/main_scene="res://scenes/field.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+run/max_fps=5
 config/icon="res://icon.svg"
 
 [display]
