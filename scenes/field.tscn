@@ -331,9 +331,9 @@ animation = &"idle_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ehol4"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_c4nx7")
-blend_point_0/pos = Vector2(0, 1)
+blend_point_0/pos = Vector2(0, -1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_uh713")
-blend_point_1/pos = Vector2(0, -0.9)
+blend_point_1/pos = Vector2(0, 1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_eckbt")
 blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_y4v50")
@@ -359,9 +359,9 @@ blend_point_0/pos = Vector2(0, 1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_130rf")
 blend_point_1/pos = Vector2(0, -1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_qasvs")
-blend_point_2/pos = Vector2(1, 0)
+blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_jaofj")
-blend_point_3/pos = Vector2(-1, 0)
+blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v7k3v"]
@@ -382,9 +382,9 @@ blend_point_0/pos = Vector2(0, 1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_uyjes")
 blend_point_1/pos = Vector2(0, -1)
 blend_point_2/node = SubResource("AnimationNodeAnimation_oip72")
-blend_point_2/pos = Vector2(1, 0)
+blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_ocwvg")
-blend_point_3/pos = Vector2(-1, 0)
+blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h72mv"]
@@ -429,7 +429,7 @@ states/Start/position = Vector2(203, 100)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_5hb6y")
 states/Walk/position = Vector2(461, -29)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_h72mv"), "Idle", "End", SubResource("AnimationNodeStateMachineTransition_lwa23"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_u6mxe"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_a0epl"), "Walk", "Slide", SubResource("AnimationNodeStateMachineTransition_8q21q"), "Slide", "Walk", SubResource("AnimationNodeStateMachineTransition_fg7gf"), "Slide", "Idle", SubResource("AnimationNodeStateMachineTransition_dr0wo"), "Idle", "Slide", SubResource("AnimationNodeStateMachineTransition_2yrjx")]
-graph_offset = Vector2(-187, -127)
+graph_offset = Vector2(-156, -97)
 
 [sub_resource type="Environment" id="Environment_7duqy"]
 background_mode = 1
@@ -470,9 +470,9 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/is_idle = false
 parameters/conditions/is_moving = false
 parameters/conditions/is_sliding = false
-parameters/Idle/blend_position = Vector2(-0.309481, 0.185841)
-parameters/Slide/blend_position = Vector2(-0.259392, 0.0176991)
-parameters/Walk/blend_position = Vector2(-0.00178891, 0.989362)
+parameters/Idle/blend_position = Vector2(-0.733453, -1)
+parameters/Slide/blend_position = Vector2(-0.713775, -0.769912)
+parameters/Walk/blend_position = Vector2(-1.30054, 2.48673)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
 bus = &"walkin"
