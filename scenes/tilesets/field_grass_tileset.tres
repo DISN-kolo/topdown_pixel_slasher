@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bn6ef0d1fsg7e"]
 
-[ext_resource type="Texture2D" uid="uid://b10v6i0mrmdwf" path="res://Textures/20241104 grid 1.png" id="1_h2a1c"]
+[ext_resource type="Texture2D" uid="uid://b10v6i0mrmdwf" path="res://textures/20241104 grid 1.png" id="1_5gf0k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iwd0q"]
-texture = ExtResource("1_h2a1c")
+texture = ExtResource("1_5gf0k")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
