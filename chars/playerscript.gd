@@ -22,7 +22,7 @@ var tween_slide : Tween
 var look_there : Vector2 = Vector2(0, 1)
 
 @onready var anim_tree = $AnimationTree
-@onready var cursor = $"../cursor"
+@onready var cursor = $"../Camera2D/cursor"
 
 func _physics_process(delta: float) -> void:
 
